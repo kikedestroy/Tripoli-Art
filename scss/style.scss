@@ -1,0 +1,32 @@
+// 1. patron de colores
+$principal:#32f; //color de valor a usar 
+//2.Modif variables de btsp
+$dark: #000 ;
+$tipografia :'Montserrat', sans-serif;
+
+@import "../lib/bootstrap/bootstrap-5.0.2/scss/bootstrap.scss";
+
+i{
+   font-size: 30px; 
+}
+body{
+    font-family: $tipografia;
+
+    min-height: 100vh;
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+.ver-mas{
+    &:hover{
+        color: goldenrod;
+    }
+}
+.carousel{
+    margin-top: 75px;
+}
+
+.text-1{
+    margin-top: 75px;
+}
