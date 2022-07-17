@@ -4,29 +4,216 @@ $principal:#32f; //color de valor a usar
 $dark: #000 ;
 $tipografia :'Montserrat', sans-serif;
 
-@import "../lib/bootstrap/bootstrap-5.0.2/scss/bootstrap.scss";
 
-i{
-   font-size: 30px; 
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer *5,
+);
+
+
+
+$ancho-titulo:500;
+$ancho-texto:300;
+
+@import "../lib/bootstrap/bootstrap-5.0.2/scss/bootstrap";
+
+
+
+
+//Medium:500 titulos
+//light:300 texto general
+
+html{
+    font-size: 16px;
 }
+
 body{
     font-family: $tipografia;
-
     min-height: 100vh;
     display:grid;
     grid-template-rows: auto 1fr auto;
 
 }
-
-.ver-mas{
-    &:hover{
-        color: goldenrod;
-    }
+//footer
+i{
+    font-size: 1.87rem; //iconos footer
 }
+//
+
 .carousel{
     margin-top: 75px;
 }
 
-.text-1{
-    margin-top: 75px;
+.margin-top-nav{
+    margin-top: 76px;
 }
+
+
+.desc-cuadro{
+    h1{
+        font-size: 3.12rem;
+        font-weight: $ancho-titulo;
+    }
+    p{
+        font-size: 1.56rem;
+        font-weight: $ancho-texto;
+    }
+}
+
+
+//artist //
+
+.desc-artista{
+    margin: 5.62rem; //90px
+    
+    font-size: 1.25rem; //20px
+    font-weight: $ancho-texto;
+    
+}
+
+
+.art-estudios{
+    margin:5.62rem; //90px
+    h1{
+        font-weight: $ancho-titulo;
+        font-size:2.5rem; //40px
+    }
+    h2{
+        font-weight: 100; //thin
+        font-size:2.25rem;
+    }
+    h3{
+        font-weight: $ancho-titulo;
+        font-size: 1.25rem; //20px
+    }
+    li{
+        font-weight: $ancho-texto;
+        font-size: 1rem;
+        list-style: none;
+    }
+
+    
+}
+
+.art-exibicion{
+    margin: 5.62rem; //90px
+    h3{
+        font-weight: $ancho-titulo;
+        font-size: 1.25rem; //20px
+    }
+    li{
+        font-weight: $ancho-texto;
+        font-size: 1rem;
+        list-style: none;
+    }
+}
+
+
+
+
+//portfolio //
+
+.portfolio{
+    
+    h1{
+        font-weight:$ancho-titulo;
+        font-size: 2.18rem; 
+    }
+    p{
+        font-weight: $ancho-texto;
+        font-size: 1.87rem;  
+    }
+}
+
+//contact//
+.hipervinculo{
+    text-decoration:none;
+    color: white;
+    &:hover{
+        color: rgb(192,192,192);
+    }
+}
+
+.lista-contacto{
+    list-style: none;
+    font-size: 1.25rem;
+   
+}
+
+#img-contacto{
+    height: 100%;
+    width: auto;
+}
+#section-contacto{
+    height: 100%;
+}
+
+#footer-meva-contact{
+    margin-right:36px;
+}
+
+.correo{
+    text-decoration:none;
+    color: black;
+    &:hover{
+        color: black;
+    }
+}
+
+@media screen and(max-width:575px){
+   
+    .desc-artista{
+        font-size: 1rem; 
+        margin: 1rem;
+    }
+
+    .art-exibicion{
+        margin: 1rem; 
+        
+    }
+    .art-estudios{
+        margin: 1rem;
+    }
+
+    .portfolio{
+        .texto-cuadro{
+           margin:2rem;
+        }
+    }
+    
+    .portfolio{
+
+        h1{        
+            font-size: 2rem; 
+        }
+        p{
+            font-size: 1rem;  
+        }
+    }
+
+    #footer-meva-contact{
+        margin-right: 0px;
+    }
+    .lista-contacto{
+        margin-top:4rem;
+        margin-bottom:1rem;
+    }
+}
+
+@media screen and(max-height:750px){
+    .lista-contacto{
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }  
+}
+
+:root {
+    --animate-duration: 2s;
+    --animate-delay: 3s;
+  }
